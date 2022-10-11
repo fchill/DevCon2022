@@ -1,0 +1,3 @@
+package common
+
+class Buyer
