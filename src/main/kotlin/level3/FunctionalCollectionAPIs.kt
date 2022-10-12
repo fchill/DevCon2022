@@ -22,7 +22,7 @@ class FunctionalCollectionAPIs {
     fun findFirstCheckoutWithAmountZero(checkouts: Sequence<Checkout>) =
         checkouts.firstOrNull { it.amount == ZERO }
 
-    fun sumAmounts(checkouts: Sequence<Checkout>) =
+    fun sumAmountsAndCount(checkouts: Sequence<Checkout>) =
         checkouts.fold(Sum()) { acc, it -> acc.incorporate(it.amount) }
     //fun sumAmounts(checkouts: Sequence<Checkout>) = checkouts.sumOf { it.amount }
 

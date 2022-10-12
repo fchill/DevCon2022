@@ -58,8 +58,8 @@ class FunctionalCollectionAPIsTest {
     }
 
     @Test
-    fun sumWithFold() {
-        assertThat(sut.sumAmounts(threeCheckouts()))
+    fun sumAndCountWithFold() {
+        assertThat(sut.sumAmountsAndCount(threeCheckouts()))
             .isEqualTo(Sum(count = 3, totalAmount = valueOf(3)))
     }
 }

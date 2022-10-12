@@ -9,9 +9,8 @@ class ScopeFunctionsAndWhyToUseThem {
 
     inner class Let {
 
-        fun orderUnreadable(id: String): String {
-            return "${extractShop(MerchantRepository.findById(id)).name} is the best shop on the web!!!"
-        }
+        fun orderUnreadable(id: String) =
+            "${extractShop(MerchantRepository.findById(id)).name} is the best shop on the web!!!"
 
         fun redundantVariables(id: String): String {
             val merchant = MerchantRepository.findById(id)

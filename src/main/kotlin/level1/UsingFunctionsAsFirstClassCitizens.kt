@@ -15,7 +15,8 @@ class UsingFunctionsAsFirstClassCitizens {
 
     fun codeOrderingVersusOptimization() {
         println("Collecting buyer data")
-        val fingerprint = expensiveBrowserFingerprint() // Only do this if you really have to!
+        val fingerprint = expensiveBrowserFingerprint()
+        // Only do this if you really have to!
 
         println("Collecting merchant data")
 
@@ -29,7 +30,8 @@ class UsingFunctionsAsFirstClassCitizens {
         println("Collecting merchant data")
 
         println("Performing some checks that possibly throw")
-        val fingerprint = expensiveBrowserFingerprint() // This is part of collecting buyer data!
+        val fingerprint = expensiveBrowserFingerprint()
+        // This is part of collecting buyer data!
         performACheckBasedOnFingerprint(fingerprint)
     }
 

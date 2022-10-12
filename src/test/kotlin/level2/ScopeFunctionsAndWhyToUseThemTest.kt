@@ -29,8 +29,10 @@ class ScopeFunctionsAndWhyToUseThemTest {
 
         val actual = variant("id")
 
-        assertThat(actual).isEqualTo("HybridCon Webstore is the best shop on the web!!!")
-        assertThat(Portfolio.promotionalMessages).containsExactly("HybridCon Webstore is the best shop on the web!!!")
+        assertThat(actual)
+            .isEqualTo("HybridCon Webstore is the best shop on the web!!!")
+        assertThat(Portfolio.promotionalMessages)
+            .containsExactly("HybridCon Webstore is the best shop on the web!!!")
     }
 
     @ParameterizedTest
@@ -39,7 +41,8 @@ class ScopeFunctionsAndWhyToUseThemTest {
 
         variant()
 
-        assertThat(Portfolio.promotionalMessages).containsExactly("Best shop on the Web!")
+        assertThat(Portfolio.promotionalMessages)
+            .containsExactly("Best shop on the Web!")
     }
 
     @ParameterizedTest
