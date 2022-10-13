@@ -21,6 +21,10 @@ class UsingFunctionsAsFirstClassCitizensTest {
         sut.resolution()
     }
 
+
+    // BACKUP
+
+
     @Test
     fun doingItTheLazyWay() {
         sut.doingItTheLazyWay()

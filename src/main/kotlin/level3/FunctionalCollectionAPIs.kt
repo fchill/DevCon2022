@@ -13,7 +13,8 @@ class FunctionalCollectionAPIs {
 
     fun consumeWithForEach(merchants: Sequence<Merchant>) =
         merchants.forEach {
-            Portfolio.promotionalMessages.add("${it.shop.name} is the best shop on the web!!!")
+            Portfolio.promotionalMessages
+                .add("${it.shop.name} is the best shop on the web!!!")
         }
 
     fun containsAnyCheckoutWithAmountZero(checkouts: Sequence<Checkout>) =

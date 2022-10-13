@@ -45,6 +45,10 @@ class UsingFunctionsAsFirstClassCitizens {
         performACheckBasedOnFingerprint(fingerprint())
     }
 
+
+    // BACKUP
+
+
     fun doingItTheLazyWay() {
         println("Collecting buyer data")
         val fingerprint = lazy { expensiveBrowserFingerprint() }
@@ -56,12 +60,6 @@ class UsingFunctionsAsFirstClassCitizens {
     }
 
 
-    fun minimalRightsForClasses() {
-        OnlyNeedsToReadById(MerchantRepository::findById)
-            .doSomething()
-    }
-
-
     class OnlyNeedsToReadById(
         private val findMerchantById: (String) -> Merchant,
     ) {
@@ -70,6 +68,12 @@ class UsingFunctionsAsFirstClassCitizens {
             println("Accessing the repository, but definitely not writing")
             findMerchantById("merchantId")
         }
+    }
+
+
+    fun minimalRightsForClasses() {
+        OnlyNeedsToReadById(MerchantRepository::findById)
+            .doSomething()
     }
 
 

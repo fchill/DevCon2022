@@ -10,7 +10,8 @@ class ScopeFunctionsAndWhyToUseThem {
     inner class Let {
 
         fun orderUnreadable(id: String) =
-            "${extractShop(MerchantRepository.findById(id)).name} is the best shop on the web!!!"
+            extractShop(MerchantRepository.findById(id)).name +
+                    "is the best shop on the web!!!"
 
         fun redundantVariables(id: String): String {
             val merchant = MerchantRepository.findById(id)
@@ -98,17 +99,19 @@ class ScopeFunctionsAndWhyToUseThem {
                 |$country
             """.trimMargin()
 
+        fun renderByExtensionFunction(postalAddress: PostalAddress) =
+            postalAddress.render()
+
+
+        // BACKUP
+
+
         // Executing a lambda on non-null objects: LET
         // Introducing an expression as a variable in local scope: LET
         // Object configuration: APPLY
         // Additional effects: ALSO
         // Object configuration and computing the result: RUN
         // Grouping function calls on an object: WITH
-
-
-        // access for test
-        fun renderByExtensionFunction(postalAddress: PostalAddress) =
-            postalAddress.render()
     }
 
     private fun extractShop(merchant: Merchant) = merchant.shop
